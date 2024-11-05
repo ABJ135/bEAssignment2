@@ -76,7 +76,13 @@ app.put('/items/:id', (req, res)=>{
     res.send(item);
 })
 
-//
+//This is delete request for deleting items
+app.delete('/items/:id', ( req,res)=>{
+    const itemId = parseInt(req.params.id);
+    let v = itemId-1;
+    item.splice(v, 1);
+    res.send(item);
+})
 
 app.listen(port, (req, res) => {
     console. log("This is server listening on port")
