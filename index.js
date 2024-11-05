@@ -58,6 +58,8 @@ app.get('/items/:id',(req, res) => {
 })
 
 //This is get request for getting items by searching through names
+//In this I have encountered an error 
+//I tried many times usinng different ways but in vain
 app.get('/items/search', (req, res)=>{
     const searchTerm = req.query.name;
     const foundItems = item.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase()));
